@@ -1,5 +1,7 @@
 function setup_build_env {
-    python3 -m pip install --upgrade pip
+    # Disable for now as it will break tensort 8.6.1 installtion in current container
+    # TODO: re-enable after CI image update
+    # python3 -m pip install --upgrade pip
     python3 -m pip install tox
     python3 -m pip install flake8
     python3 -m pip install "black>=22.3,<23.0"
@@ -21,6 +23,7 @@ function setup_torch_gpu {
 }
 
 function setup_torch_cpu {
+    :
 }
 
 function setup_torch_gpu_non_linux {
